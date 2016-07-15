@@ -18,6 +18,9 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+set hlsearch
+set nu
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
