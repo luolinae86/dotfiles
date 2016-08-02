@@ -2,9 +2,9 @@ set nocompatible      " We're running Vim, not Vi!
 syntax on             " Enable syntax highlighting
 syntax enable
 
-filetype on           " Enable filetype detection
-filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
+filetype on               " Enable filetype detection
+filetype indent on        " Enable filetype-specific indenting
+filetype plugin indent on " Enable filetype-specific plugins
 
 " NERDTree
 " autocmd vimenter * NERDTree
@@ -13,8 +13,11 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 set nu
-set hlsearch
+set hlsearch    " 查找时高亮
+set incsearch   " 查找时实时高亮
 set cursorline
+set showcmd     " 状态栏显示目前执行的命令
+set showmatch   " 显示括号配对情况
 set background=dark
 set tabstop=2 shiftwidth=2 expandtab
 
