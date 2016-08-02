@@ -1,27 +1,28 @@
 set nocompatible      " We're running Vim, not Vi!
 syntax on             " Enable syntax highlighting
+syntax enable
+
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
 " NERDTree
 " autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-:set tabstop=2 shiftwidth=2 expandtab
+set nu
+set hlsearch
+set cursorline
+set background=dark
+set tabstop=2 shiftwidth=2 expandtab
 
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
-syntax enable
-set background=dark
 colorscheme solarized
-
-set hlsearch
-set nu
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
