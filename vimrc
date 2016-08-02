@@ -37,7 +37,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'othree/html5.vim'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'Townk/vim-autoclose'
 Plugin 'mileszs/ack.vim'
 
 call vundle#end()            " required
