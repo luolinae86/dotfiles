@@ -18,6 +18,7 @@ set incsearch   " 查找时实时高亮
 set cursorline
 set showcmd     " 状态栏显示目前执行的命令
 set showmatch   " 显示括号配对情况
+set noswapfile  "不生成swapfile"
 set background=dark
 set tabstop=2 shiftwidth=2 expandtab
 
@@ -25,6 +26,7 @@ autocmd Filetype erb setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 autocmd Filetype go setlocal ts=4 sts=4 sw=4
 
 colorscheme solarized
